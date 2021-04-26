@@ -9,6 +9,10 @@
       href="https://fonts.googleapis.com/css2?family=Poppins:wght@500;700&display=swap"
       rel="stylesheet"
     />
+    <link
+      rel="stylesheet"
+      href="https://cdn.linearicons.com/free/1.0.0/icon-font.min.css"
+    />
     <link rel="stylesheet" href="./style.css" />
     <title>Shortly - URL shortening API challenge</title>
   </head>
@@ -69,22 +73,7 @@
               Shorten It!
             </button>
           </div>
-          <div class="links-container">
-            <div class="links-card">
-              <h2 class="links-card__link">
-                https://twitter.com/frontendmentor
-              </h2>
-              <p class="links-card__shortened-link">https://rel.ink/gxOXp9</p>
-              <a class="btn links-btn">Copy</a>
-            </div>
-            <div class="links-card">
-              <h2 class="links-card__link">
-                https://twitter.com/frontendmentor
-              </h2>
-              <p class="links-card__shortened-link">https://rel.ink/gxOXp9</p>
-              <a class="btn links-btn">Copy</a>
-            </div>
-          </div>
+          <div id="links-container" class="links-container"></div>
         </div>
         <h2 class="page-section__title">Advanced Statistics</h2>
         <p class="page-section__text">
@@ -198,5 +187,6 @@
         </div>
       </footer>
     </div>
+    <script src="./script.js"></script>
   </body>
 </html>
