@@ -62,7 +62,17 @@ a:focus {
   padding-bottom: 0.825rem;
   text-decoration: none;
   border-radius: 25px;
-  transition: box-shadow 200ms ease-in;
+  transition: box-shadow 200ms ease-in, background-color 100ms ease-in;
+}
+
+.btn--dark {
+  background-color: var(--dark-violet);
+}
+
+.btn.error,
+.btn.error:hover {
+  background-color: var(--red);
+  cursor: default;
 }
 
 .btn:focus {
@@ -77,6 +87,10 @@ a:focus {
 
   .btn:hover {
     background-color: hsl(180, 61%, 65%);
+  }
+
+  .btn--dark:hover {
+    background-color: var(--dark-violet);
   }
 }
 
@@ -375,22 +389,34 @@ a:focus {
   /* max-height: 0px; */
 }
 
+.links-container__title {
+  text-transform: uppercase;
+  margin: 2rem 0 0.5rem 1.5rem;
+  color: #aaa;
+  font-size: 1em;
+  letter-spacing: -1px;
+}
+
 .links-card {
   padding-bottom: 1rem;
   background-color: white;
   border-radius: 10px;
   margin-bottom: 1rem;
+  padding: 1rem 1.5rem;
   box-shadow: 0 0 4px -2px rgba(0, 0, 0, 0.1);
 }
 
 .links-card__link {
-  padding: 1rem 1.5rem 0.5rem 1.5rem;
   font-size: 0.875em;
   font-weight: 500;
-  border-bottom: 1px solid var(--gray);
+  /* margin-left: 0.5rem; */
+  padding: 0.5rem;
   color: var(--dark-violet);
   max-width: 320 px;
   overflow-wrap: break-word;
+  margin-bottom: 0.5rem;
+  border-radius: 5px;
+  /* background-color: rgb(247, 247, 247); */
 }
 
 .links-btn {
@@ -398,8 +424,7 @@ a:focus {
   height: 36px;
   padding: 0;
   line-height: 36px;
-  margin-left: 1.5rem;
-  width: calc(100% - 3rem);
+  width: 100%;
   border-radius: 5px;
   font-size: 0.825em;
 }
@@ -407,23 +432,32 @@ a:focus {
 .links-card__shortened-link {
   width: 100%;
   color: var(--cyan);
-  padding: 0.5rem 1.5rem 1rem 1.5rem;
   font-size: 0.875em;
+  margin-bottom: 1rem;
   font-weight: 500;
+  padding: 0.5rem;
+  border-radius: 5px;
+  background-color: #f2fdfd;
   display: block;
+}
+
+.links-card__shortened-link.error,
+.links-card__shortened-link.error:hover {
+  color: var(--red);
 }
 
 @media screen and (min-width: 1024px) {
   .links-card {
     display: flex;
     align-items: center;
-    padding: 0 1.5rem;
+    padding: 1rem 1.5rem;
     max-height: 56px;
     box-shadow: 0 0 10px -2px rgba(24, 17, 26, 0.1),
       0 0 2px 1px rgba(24, 17, 26, 0.1);
   }
 
   .links-card__link {
+    margin: 0;
     border-bottom: unset;
     flex: 4;
     padding: 0;
@@ -431,7 +465,9 @@ a:focus {
 
   .links-card__shortened-link {
     flex: 2;
+    margin: 0 1.5rem 0 0;
     text-align: right;
+    background-color: unset;
     padding: 0;
   }
 
