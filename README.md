@@ -31,7 +31,7 @@ Users should be able to:
 ### Links
 
 - Solution URL: https://github.com/EduarDG09/url-shortening-api-master
-- Live Site URL: https://github.com/EduarDG09/url-shortening-api-master
+- Live Site URL: https://eduardg09.github.io/url-shortening-api-master/
 
 ## My process
 
