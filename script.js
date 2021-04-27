@@ -30,6 +30,8 @@ document.addEventListener("DOMContentLoaded", function () {
       if (processing < 5) {
         const link = inputValidation(linkInput);
         if (link !== false) {
+          if (linkInput.classList.contains("error"))
+            linkInput.classList.remove("error");
           if (queue.includes(link))
             return console.log("El link introducido ya está siendo procesado.");
           else queue.push(link);
@@ -41,6 +43,12 @@ document.addEventListener("DOMContentLoaded", function () {
           if (queue.indexOf(link) !== -1) queue.splice(queue.indexOf(link), 1);
           processing--;
           return console.log("Link procesado correctamente!");
+        } else {
+          linkInput.classList.add("error");
+          linkInput.style.animation = "shake 100ms ease-in 3";
+          linkInput.addEventListener("animationend", function () {
+            this.style.animation = "";
+          });
         }
       } else {
         console.log("No se pueden procesar mas de 5 links a la vez!");

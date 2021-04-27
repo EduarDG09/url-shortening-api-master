@@ -496,6 +496,11 @@ a:focus {
   box-shadow: 0 0 0 3px hsla(180, 72%, 62%, 0.576);
 }
 
+.shortener-input.error,
+.shortener-input.error:focus {
+  box-shadow: 0 0 0 3px var(--red);
+}
+
 @media screen and (min-width: 1024px) {
   .shortener-input {
     flex: 2;
@@ -844,5 +849,14 @@ a:focus {
 
 .resize-height {
   /* transform-origin: top; */
-  animation: resize-height 250ms ease-in-out forwards;
+  animation: resize-height 250ms ease-in forwards;
+}
+
+@keyframes shake {
+  0% {
+    transform: translateX(-5px);
+  }
+  100% {
+    transform: translateX(5px);
+  }
 }
