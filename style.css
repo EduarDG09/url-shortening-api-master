@@ -491,6 +491,24 @@ a:focus {
   transition: box-shadow 200ms ease-in;
 }
 
+.input-label {
+  position: absolute;
+  top: 1.7rem;
+  left: 3rem;
+  letter-spacing: -1px;
+  font-size: 1.2em;
+  color: var(--grayish-violet);
+  font-weight: 500;
+  pointer-events: none;
+  transition: opacity 200ms ease-out, top 200ms ease-in-out,
+    left 200ms ease-in-out, font-size 200ms ease-in-out;
+}
+
+.shortener-input:focus + .input-label,
+.shortener-input:valid + .input-label {
+  opacity: 0;
+}
+
 .shortener-input:focus {
   outline: none;
   box-shadow: 0 0 0 3px hsla(180, 72%, 62%, 0.576);
@@ -506,11 +524,20 @@ a:focus {
     flex: 2;
     margin-right: 1.5rem;
   }
-}
 
-.shortener-input::placeholder {
-  font-size: 1em;
-  color: var(--gray);
+  .input-label {
+    top: 3.5rem;
+    left: 4.5rem;
+  }
+
+  .shortener-input:focus + .input-label,
+  .shortener-input:valid + .input-label {
+    opacity: 0.7;
+    top: 1rem;
+    left: 3.5rem;
+    font-size: 1em;
+    color: var(--cyan);
+  }
 }
 
 .shortener-btn {
